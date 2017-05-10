@@ -25,14 +25,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initSeekBarListener() {
         mQualitySb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            String progress;
             @Override
             public void onStartTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onStopTrackingTouch(SeekBar seekBar) {}
             @Override
             public void onProgressChanged(SeekBar seekBar, int progresValue, boolean fromUser) {
-                mQualityTv.setText(progresValue+"");
+                mQualityTv.setText(String.valueOf(progresValue));
             }
         });
     }
